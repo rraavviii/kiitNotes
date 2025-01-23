@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function(req, res) {
     res.render('index');
  });
-
+app.get('/signup', function(req, res) { res.render('signup'); });
 app.post('/register',async function(req,res){
     let { email, password } = req.body;
     let user = await userModel.findOne({ email });
@@ -28,7 +28,7 @@ app.post('/register',async function(req,res){
        
      });
     console.log(req.body)
-    res.send('Data received')
+    res.redirect('/login')
 })
 
 
@@ -46,7 +46,6 @@ app.get('/user',function(req,res){
 
 app.post('/usepage',async function(req,res){ 
       let{name,email,query} = req.body;
-        console.log(req.body)
         res.redirect('/user')
     });
 
