@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Year Question Papers</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-graduation-cap"></i> Previous Year Question Papers</h1>
+            <p>Access past exam papers to enhance your preparation</p>
+            <!-- <div class="search-box">
+                <input type="text" placeholder="Search for subjects...">
+                <i class="fas fa-search"></i>
+            </div> -->
+        </header>
+        
+        <div class="subjects-grid">
+            <div class="subject-card" data-subject="mathematics">
+                <i class="fas fa-square-root-alt"></i>
+                <h3>Mathematics</h3>
+                <p>View all mathematics papers</p>
+             
+            </div>
+            <div class="subject-card" data-subject="physics">
+                <i class="fas fa-atom"></i>
+                <h3>Physics</h3>
+                <p>View all physics papers</p>
+            </div>
+            <div class="subject-card" data-subject="chemistry">
+                <i class="fas fa-flask"></i>
+                <h3>Chemistry</h3>
+                <p>View all chemistry papers</p>
+            </div>
+            <div class="subject-card" data-subject="biology">
+                <i class="fas fa-dna"></i>
+                <h3>Biology</h3>
+                <p>View all biology papers</p>
+            </div>
+            <div class="subject-card" data-subject="english">
+                <i class="fas fa-book"></i>
+                <h3>DBMS</h3>
+                <p>View all DBMS papers</p>
+            </div>
+            <div class="subject-card" data-subject="computer">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Computer Science</h3>
+                <p>View all computer science papers</p>
+            </div>
+            <div class="subject-card" data-subject="computer">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Computer Science</h3>
+                <p>View all computer science papers</p>
+            </div>
+            <div class="subject-card" data-subject="computer">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Computer Science</h3>
+                <p>View all computer science papers</p>
+            </div>
+            <div class="subject-card" data-subject="computer">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Computer Science</h3>
+                <p>View all computer science papers</p>
+            </div>
+        </div>
+         
+        <!-- Modal for displaying question papers -->
+        <div id="questionPaperModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2 id="modalSubjectTitle"></h2>
+                <div id="questionPapersList"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="queryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2><i class="fas fa-envelope"></i> Submit Your Query</h2>
+            <form id="queryForm" class="query-form" action="/usepage" method="post">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="query"><i class="fas fa-question-circle"></i> Your Query</label>
+                    <textarea id="query" name="query" required placeholder="Type your question here..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Query
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Query Button -->
+    <button id="queryButton" class="floating-query-btn">
+        <i class="fas fa-question-circle"></i> Query
+    </button>
+</div>
+    <div class="footer">
+        <p>&copy; 2021 Previous Year Question Papers. All rights reserved.</p>
+      
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
